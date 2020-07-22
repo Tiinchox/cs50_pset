@@ -2,9 +2,7 @@
 
 Exercises of CS50's Introduction to Computer Science.
 
-pset 1 - pset 5: C
-pset 6: Python
-pset 7: Python & SQL
+pset 1 - pset 5: C // pset 6: Python // pset 7: Python & SQL
 
 # pset1
 
