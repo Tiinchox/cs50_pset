@@ -4,7 +4,6 @@
 
 int main(void)
 {
-    //Initialize cash. It must accept decimal numbers so we used FLOAT instead of INT.
     float cash = 0.0;
     
     //Coins
@@ -13,45 +12,41 @@ int main(void)
     int nk = 5;  //Nickel     
     int pn = 1;  //Penny
     
-    //Initialize coins.
     int coins = 0;
 
-    //Prompt user to input change. If the user inputs a negative number, we will prompt again until we receive a positive one.
+    //Prompt user to input change
     
     do{
         cash = get_float("Change owed\n");
     } while (cash < 0);
 
-    //Convert dollars to cents.
+    //Convert dollars to cents
     
     int cents = round(cash * 100);
-    
-    //We need to check how many of each coin we'll give back as change.
-    
-    //How many quarters?
+  
+    //Change in quarters
     while (cents >= qt){
         coins++;
         (cents -= qt);
     } 
 
-    //How many dimes?
+    //Change in dimes
     while (cents >= dm){
         coins++;
         (cents -= dm);
     }
     
-    //How many nickels?
+    //Change in nickels
     while (cents >= nk){
         coins++;
         (cents -= nk);
     } 
     
-    //How many pennies?
+    //Change in pennies
     while (cents >= pn){
         coins++;
         (cents -= pn);
     }
     
-    //We finally print the minimum amount of coins we give back as change. 
     printf("Coins returned: %i\n", coins);
 }
